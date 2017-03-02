@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/plugin-install.dtd">
+<install type="plugin" group="search" version="1.5.0" method="upgrade">
+	<name>Phoca Gallery Search Plugin</name>
+	<creationDate>18/05/2010</creationDate>
+	<author>Jan Pavelka ( www.phoca.cz )</author>
+	<authorEmail></authorEmail>
+	<authorUrl>www.phoca.cz</authorUrl>
+	<copyright>Jan Pavelka</copyright>
+	<license>GNU/GPL</license>
+	<version>2.7.1</version>
+	<!-- The description is optional and defaults to the name -->
+	<description><![CDATA[ 
+       Phoca Gallery Search Plugin - adds search feature for Phoca Gallery component<br />
+       More information on <a href="http://www.phoca.cz" target="_blank" >www.phoca.cz</a>  
+      ]]></description>
+
+	<!-- Main File Copy Section -->
+	<files>
+		<filename plugin="phocagallery">phocagallery.php</filename>
+		<filename plugin="phocagallery">phocagallery.xml</filename>
+	</files>
+
+	<!-- Language -->
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_search_phocagallery.ini</language>
+	</languages>
+	
+	<administration>
+		<languages folder="language">
+			<language tag="en-GB">en-GB.plg_search_phocagallery.ini</language>
+		</languages>
+	</administration>
+	
+	<params>
+		<param name="search_limit" type="text" size="5" default="50" label="Search Limit" description="Number of Search items to return"/>
+	</params>
+
+</install>

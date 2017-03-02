@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<install type="module" version="1.5.0">
+    <name>Lof PieceMaker Module</name>
+    <creationDate>JUNE 2010</creationDate>
+    <author>LandOfCoder</author>
+    <copyright>GNU / GPL version 2</copyright>
+    <authorEmail>landofcoder@gmail.com</authorEmail>
+    <authorUrl>http://www.landofcoder.com</authorUrl>
+    <version>1.0</version>
+	<description>MODULE DESCRIPTION</description>
+     <files>
+         <filename module="mod_lofpiecemaker">mod_lofpiecemaker.php</filename>
+         <filename module="mod_lofpiecemaker">helper.php</filename>
+		  <filename module="mod_lofpiecemaker">index.html</filename>
+         <filename module="mod_lofpiecemaker">piecemakerXML.php</filename>
+		 <filename module="mod_lofpiecemaker">LICENSE.php</filename>
+		 <filename module="mod_lofpiecemaker">CHANGELOG.php</filename>
+         <folder module="mod_lofpiecemaker">libs</folder>
+		 <folder module="mod_lofpiecemaker">assets</folder>
+	 	 <folder module="mod_lofpiecemaker">tmpl</folder>
+         <folder module="mod_lofpiecemaker">themes</folder>
+    </files>
+	<languages>
+		<language tag="en-GB">languages/en-GB.mod_lofpiecemaker.ini</language>
+	</languages>
+  <params group="other">
+		 <param name="moduleclass_sfx" type="text" default="" label="MODULE CLASS SUFFIX" description="PARAMMODULECLASSSUFFIX" />
+    	<param name="inner_bg" type="lofcolorpicker" default="111111" label="INNER BACKGROUND" description="INNER BACKGROUND DESC" />
+		<param name="text_bg" type="lofcolorpicker" default="031933" label="TEXT BACKGROUND" description="TEXT BACKGROUND DESC" />
+	    <param name="expand" type="text" default="20" label="EXPAND" description="EXPAND DESC" />
+		<param name="segments" type="text" default="7" label="SEGMENTS" description="SEGMENTS DESC" />
+        <param name="shadow" type="text" default="100" label="SHADOW" description="SHADOW DESC" />
+        <param name="text_distance" type="text" default="25" label="TEXT DISTANCE" description="TEXT DISTANCE DESC" />
+        <param name="z_distance" type="text" default="0" label="Z DISTANCE" description="Z DISTANCE DESC" />
+	</params>
+
+    <params addpath="/modules/mod_lofpiecemaker/libs/elements">
+
+		
+		<param name="theme" type="folderlist" default="basic" label="SELECT THEME" directory="modules/mod_lofpiecemaker/themes/" filter="" exclude="" stripext="" />
+		<param name="module_height" type="text" default="450" label="MODULE HEIGHT" description="MODULE HEIGHT DESC"></param>
+		<param name="module_width" type="text" default="960" label="MODULE WIDTH" description="MODULE WIDTH DESC"></param>		
+		<param name="main_height" type="text" default="280" label="DISPLAY MAIN HEIGHT" description="DISPLAY MAIN HEIGHT DESC"></param>
+		<param name="main_width" type="text" default="820" label="DISPLAY MAIN WIDTH" description="DISPLAY MAIN WIDTH DESC"></param>
+
+
+<param name="group" type="folderlist" default="image" label="SELECT GROUP" directory="modules/mod_lofpiecemaker/libs/groups/" filter="" exclude="" stripext="" />
+
+
+
+<param type="fgroup" title="START GROUP IMAGE" group="start" for="image"/>				 
+		  <param name="image_folder" type="text" default="" size="40" label="IMAGE FOLDER PATH" description="IMAGE FOLDER PATH DESC"></param>
+       
+	     <param name="image_category" type="category" default="" label="IMAGE CATEGORY" description="IMAGE CATEGORY DESC" />
+		 
+		 <param name="image_ordering" type="list" default="" label="IMAGE SORTED BY" description="IMAGE SORTED BY DESC">
+			<option value="">NAME</option>
+			<option value="random">RANDOM</option>
+		</param>
+  
+<param type="fgroup" title="END GROUP" group="end" />
+	
+	<param name="limit_items" type="text" default="5" label="LIMIT ITEMS" description="LIMIT ITEMS DESC" />
+		 <param type="spacer" default="EFFECT SETTING" />
+		<param name="autoplay" type="text" default="12" label="INTERVAL" description="INTERVAL DESC" />
+		<param name="duration" type="text" default="1.2" label="ANIMATION DURATION" description="ANIMATION DURATION DESC" />
+		<param name="tween_delay" type="text" default="0.1" label="TWEEN DELAY" description="TWEEN DELAY DESC" />
+		
+		<!--param name="layout_style" type="list" default="blank" label="PLAY STYLE" description="PLAY STYLE DESC">			
+			<option value="opacitys">OPACITYS</option>
+			<option value="blank">BLANK</option>
+		</param-->
+		
+		<param name="effect" type="list" default="easeInOutExpo" label="ANIMATION TRANSITION" description="ANIMATION TRANSITION DESC">
+		   <option value="easeInQuad">easeInQuad</option>
+		    <option value="easeOutQuad">easeOutQuad</option>
+			<option value="easeInOutQuad">easeInOutQuad</option>
+			<option value="easeInCubic">easeInCubic</option>
+			<option value="easeOutCubic">easeOutCubic</option>
+			<option value="easeInOutCubic">easeInOutCubic</option>
+			<option value="easeInQuart">easeInQuart</option>
+			<option value="easeOutQuart">easeOutQuart</option>
+			<option value="easeInOutQuart">easeInOutQuart</option>
+			<option value="easeInQuint">easeInQuint</option>
+			<option value="easeOutQuint">easeOutQuint</option>
+			<option value="easeInOutQuint">easeInOutQuint</option>
+			<option value="easeInSine">easeInSine</option>
+			<option value="easeOutSine">easeOutSine</option>
+			<option value="easeInOutSine">easeInOutSine</option>
+			<option value="easeInExpo">easeInExpo</option>
+			<option value="easeOutExpo">easeOutExpo</option>
+			<option value="easeInOutExpo">easeInOutExpo</option>
+			<option value="easeInCirc">easeInCirc</option>
+			<option value="easeOutCirc">easeOutCirc</option>
+			<option value="easeInOutCirc">easeInOutCirc</option>
+			<option value="easeInElastic">easeInElastic</option>
+			<option value="easeOutElastic">easeOutElastic</option>
+			<option value="easeInOutElastic">easeInOutElastic</option>
+			<option value="easeInBack">easeInBack</option>
+			<option value="easeOutBack">easeOutBack</option>
+			<option value="easeInOutBack">easeInOutBack</option>
+			<option value="easeInBounce">easeInBounce</option>
+			<option value="easeOutBounce">easeOutBounce</option>
+			<option value="easeInOutBounce">easeInOutBounce</option>							  
+        </param>
+	</params>
+	<params group="advanced">
+		<param name="cache_time" type="text" default="30" label="CACHE TIME" description="CACHE TIME DESC" />
+		<param name="auto_renderthumb" type="hidden" default="1" label="RENDER THUMBNAIL" description="RENDER THUMBNAIL DESC">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+		<param name="auto_strip_tags" type="list" default="1" label="STRIP TAGS" description="STRIP TAGS DESC">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param> 
+		<param name="open_target" type="list" default="_parent" label="CLICK LINK OPEN IN" description="CLICK LINK OPEN IN DESC">
+			  <option value="_blank">New window</option>
+			  <option value="_parent">Parent window</option>
+		 </param>	
+	</params>
+</install>

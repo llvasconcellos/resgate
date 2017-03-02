@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Map">
+		<message>Map</message>
+	</layout>
+	<state>
+		<name>Map</name>
+		<description>Map</description>
+		<url addpath="/administrator/components/com_phocamaps/elements">
+			<param name="id" type="phocamap" section="com_phocamaps" default="0" label="Select Map" description="Select Map DESC" />
+		</url>
+		
+		<params addpath="/administrator/components/com_phocamaps/elements">
+		
+		</params>
+	</state>
+</metadata>

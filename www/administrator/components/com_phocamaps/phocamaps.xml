@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/component-install.dtd">
+<install method="upgrade" type="component" version="1.5.0">
+	<name>PhocaMaps</name>
+	<creationDate>25/03/2010</creationDate>
+	<author>Jan Pavelka (www.phoca.cz)</author>
+	<authorEmail></authorEmail>
+	<authorUrl>www.phoca.cz</authorUrl>
+	<copyright>Jan Pavelka</copyright>
+	<license>GNU/GPL</license>
+	<!-- The version string is recorded in the components table -->
+	<version>1.1.0</version>
+	<!-- The description is optional and defaults to the name -->
+	<description>Phoca Maps</description>
+
+	<!-- Install Database Section -->
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">install.sql</file>
+		</sql>
+	</install>
+
+	<!-- Uninstall Database Section -->
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">uninstall.sql</file>
+		</sql>
+	</uninstall>
+
+	<!-- Custom Install Script to execute -->
+	<installfile>install.phocamaps.php</installfile>
+
+	<!-- Custom Uninstall Script to execute -->
+	<uninstallfile>uninstall.phocamaps.php</uninstallfile>
+
+	<!-- Site Main File Copy Section -->
+	<files folder="front">
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+		<filename>phocamaps.php</filename>
+		<filename>router.php</filename>
+		<filename>assets/images/box-black-bl.png</filename>
+		<filename>assets/images/box-black-br.png</filename>
+		<filename>assets/images/box-black-tl.png</filename>
+		<filename>assets/images/box-black-tr.png</filename>
+		<filename>assets/images/box-grey-bl.png</filename>
+		<filename>assets/images/box-grey-br.png</filename>
+		<filename>assets/images/box-grey-tl.png</filename>
+		<filename>assets/images/box-grey-tr.png</filename>
+		<filename>assets/images/box-greyrc-bl.png</filename>
+		<filename>assets/images/box-greyrc-br.png</filename>
+		<filename>assets/images/box-greyrc-tl.png</filename>
+		<filename>assets/images/box-greyrc-tr.png</filename>
+		<filename>assets/images/icon-printlink.png</filename>
+		<filename>assets/images/igreen/image.png</filename>
+		<filename>assets/images/igreen/index.html</filename>
+		<filename>assets/images/igreen/shadow.png</filename>
+		<filename>assets/images/igrey/image.png</filename>
+		<filename>assets/images/igrey/index.html</filename>
+		<filename>assets/images/igrey/shadow.png</filename>
+		<filename>assets/images/ihome/image.png</filename>
+		<filename>assets/images/ihome/index.html</filename>
+		<filename>assets/images/ihome/shadow.png</filename>
+		<filename>assets/images/iinfoh/image.png</filename>
+		<filename>assets/images/iinfoh/index.html</filename>
+		<filename>assets/images/iinfoh/shadow.png</filename>
+		<filename>assets/images/iinfoi/image.png</filename>
+		<filename>assets/images/iinfoi/index.html</filename>
+		<filename>assets/images/iinfoi/shadow.png</filename>
+		<filename>assets/images/iinfop/image.png</filename>
+		<filename>assets/images/iinfop/index.html</filename>
+		<filename>assets/images/iinfop/shadow.png</filename>
+		<filename>assets/images/iinfoph/image.png</filename>
+		<filename>assets/images/iinfoph/index.html</filename>
+		<filename>assets/images/iinfoph/shadow.png</filename>
+		<filename>assets/images/iinfoz/image.png</filename>
+		<filename>assets/images/iinfoz/index.html</filename>
+		<filename>assets/images/iinfoz/shadow.png</filename>
+		<filename>assets/images/index.html</filename>
+		<filename>assets/images/istar/image.png</filename>
+		<filename>assets/images/istar/index.html</filename>
+		<filename>assets/images/istar/shadow.png</filename>
+		<filename>assets/images/iyellow/image.png</filename>
+		<filename>assets/images/iyellow/shadow.png</filename>
+		<filename>assets/index.html</filename>
+		<filename>assets/js/base64.js</filename>
+		<filename>assets/js/geoxml3.js</filename>
+		<filename>assets/js/index.html</filename>
+		<filename>assets/phocamaps.css</filename>
+		<filename>helpers/index.html</filename>
+		<filename>helpers/route.php</filename>
+		<filename>models/index.html</filename>
+		<filename>models/map.php</filename>
+		<filename>views/index.html</filename>
+		<filename>views/map/index.html</filename>
+		<filename>views/map/metadata.xml</filename>
+		<filename>views/map/tmpl/default.php</filename>
+		<filename>views/map/tmpl/default.xml</filename>
+		<filename>views/map/tmpl/index.html</filename>
+		<filename>views/map/view.html.php</filename>
+		<filename>views/route/index.html</filename>
+		<filename>views/route/metadata.xml</filename>
+		<filename>views/route/tmpl/default.php</filename>
+		<filename>views/route/tmpl/index.html</filename>
+		<filename>views/route/view.html.php</filename>
+	</files>
+
+	<!-- Language -->
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.com_phocamaps.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.com_phocamaps.menu.ini</language>
+	</languages>
+
+	<!-- Administration -->
+	<administration>
+		<menu img="components/com_phocamaps/assets/images/icon-16-pmap-menu.png" link="option=com_phocamaps">Phoca Maps</menu>
+		<submenu>
+			<menu img="components/com_phocamaps/assets/images/icon-16-pmap-menu-cp.png" link="option=com_phocamaps">Control Panel</menu>
+			<menu img="components/com_phocamaps/assets/images/icon-16-pmap-menu-map.png" link="option=com_phocamaps&amp;view=phocamapsmaps">Maps</menu>
+			<menu img="components/com_phocamaps/assets/images/icon-16-pmap-menu-marker.png" link="option=com_phocamaps&amp;view=phocamapsmarkers">Markers</menu>
+			<menu img="components/com_phocamaps/assets/images/icon-16-pmap-menu-info.png" link="option=com_phocamaps&amp;view=phocamapsinfo">Info</menu>
+		</submenu>
+
+		<!-- Administration Main File Copy Section -->
+		<files>
+			<filename>admin.phocamaps.php</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>install.bak</filename>
+			<filename>install.phocamaps.php</filename>
+			<filename>install.sql</filename>
+			<filename>phocamaps.xml</filename>
+			<filename>uninstall.phocamaps.php</filename>
+			<filename>uninstall.sql</filename>
+			<filename>assets/images/icon-16-pmap-menu-cp.png</filename>
+			<filename>assets/images/icon-16-pmap-menu-info.png</filename>
+			<filename>assets/images/icon-16-pmap-menu-map.png</filename>
+			<filename>assets/images/icon-16-pmap-menu-marker.png</filename>
+			<filename>assets/images/icon-16-pmap-menu.png</filename>
+			<filename>assets/images/icon-16-warning.png</filename>
+			<filename>assets/images/icon-48-info.png</filename>
+			<filename>assets/images/icon-48-map.png</filename>
+			<filename>assets/images/icon-48-marker.png</filename>
+			<filename>assets/images/icon-48-phoca.png</filename>
+			<filename>assets/images/icon-48-phocamaps.png</filename>
+			<filename>assets/images/index.html</filename>
+			<filename>assets/images/install.png</filename>
+			<filename>assets/images/logo-phoca.png</filename>
+			<filename>assets/images/logo-product.png</filename>
+			<filename>assets/images/logo.png</filename>
+			<filename>assets/images/update.png</filename>
+			<filename>assets/images/upgrade.png</filename>
+			<filename>assets/index.html</filename>
+			<filename>assets/jcp/defaultcolor.jpg</filename>
+			<filename>assets/jcp/index.html</filename>
+			<filename>assets/jcp/license.txt</filename>
+			<filename>assets/jcp/picker.css</filename>
+			<filename>assets/jcp/picker.js</filename>
+			<filename>assets/js/coordinates.js</filename>
+			<filename>assets/js/index.html</filename>
+			<filename>assets/phocamaps.css</filename>
+			<filename>controllers/index.html</filename>
+			<filename>controllers/phocamapsinfo.php</filename>
+			<filename>controllers/phocamapsinstall.php</filename>
+			<filename>controllers/phocamapsmap.php</filename>
+			<filename>controllers/phocamapsmarker.php</filename>
+			<filename>controllers/phocamapsuninstall.php</filename>
+			<filename>elements/index.html</filename>
+			<filename>elements/phocacolortext.php</filename>
+			<filename>elements/phocahead.php</filename>
+			<filename>elements/phocalistwarning.php</filename>
+			<filename>elements/phocalongtext.php</filename>
+			<filename>elements/phocamap.php</filename>
+			<filename>elements/phocatext.php</filename>
+			<filename>elements/phocatextarea.php</filename>
+			<filename>help/en-GB/css/help.css</filename>
+			<filename>help/en-GB/css/index.html</filename>
+			<filename>help/en-GB/index.html</filename>
+			<filename>help/en-GB/screen.phocamaps.html</filename>
+			<filename>helpers/index.html</filename>
+			<filename>helpers/phocamaps.php</filename>
+			<filename>helpers/phocamapsicon.php</filename>
+			<filename>helpers/phocamapsmap.php</filename>
+			<filename>helpers/phocamapspath.php</filename>
+			<filename>helpers/phocamapsrender.php</filename>
+			<filename>models/index.html</filename>
+			<filename>models/phocamapsmap.php</filename>
+			<filename>models/phocamapsmaps.php</filename>
+			<filename>models/phocamapsmarker.php</filename>
+			<filename>models/phocamapsmarkers.php</filename>
+			<filename>tables/index.html</filename>
+			<filename>tables/phocamapsmap.php</filename>
+			<filename>tables/phocamapsmarker.php</filename>
+			<filename>views/index.html</filename>
+			<filename>views/phocamapscp/index.html</filename>
+			<filename>views/phocamapscp/tmpl/default.php</filename>
+			<filename>views/phocamapscp/tmpl/index.html</filename>
+			<filename>views/phocamapscp/view.html.php</filename>
+			<filename>views/phocamapsgmap/index.html</filename>
+			<filename>views/phocamapsgmap/tmpl/default.php</filename>
+			<filename>views/phocamapsgmap/tmpl/index.html</filename>
+			<filename>views/phocamapsgmap/view.html.php</filename>
+			<filename>views/phocamapsinfo/index.html</filename>
+			<filename>views/phocamapsinfo/tmpl/default.php</filename>
+			<filename>views/phocamapsinfo/tmpl/index.html</filename>
+			<filename>views/phocamapsinfo/view.html.php</filename>
+			<filename>views/phocamapsmap/index.html</filename>
+			<filename>views/phocamapsmap/tmpl/form.php</filename>
+			<filename>views/phocamapsmap/tmpl/index.html</filename>
+			<filename>views/phocamapsmap/view.html.php</filename>
+			<filename>views/phocamapsmaps/index.html</filename>
+			<filename>views/phocamapsmaps/tmpl/default.php</filename>
+			<filename>views/phocamapsmaps/tmpl/index.html</filename>
+			<filename>views/phocamapsmaps/view.html.php</filename>
+			<filename>views/phocamapsmarker/index.html</filename>
+			<filename>views/phocamapsmarker/tmpl/form.php</filename>
+			<filename>views/phocamapsmarker/tmpl/index.html</filename>
+			<filename>views/phocamapsmarker/view.html.php</filename>
+			<filename>views/phocamapsmarkers/index.html</filename>
+			<filename>views/phocamapsmarkers/tmpl/default.php</filename>
+			<filename>views/phocamapsmarkers/tmpl/index.html</filename>
+			<filename>views/phocamapsmarkers/view.html.php</filename>
+		</files>
+
+		<!-- Only Development - copy ./front, ./language, ./other to admin area -->
+		<files>
+			<filename>front/assets/images/box-black-bl.png</filename>
+			<filename>front/assets/images/box-black-br.png</filename>
+			<filename>front/assets/images/box-black-tl.png</filename>
+			<filename>front/assets/images/box-black-tr.png</filename>
+			<filename>front/assets/images/box-grey-bl.png</filename>
+			<filename>front/assets/images/box-grey-br.png</filename>
+			<filename>front/assets/images/box-grey-tl.png</filename>
+			<filename>front/assets/images/box-grey-tr.png</filename>
+			<filename>front/assets/images/box-greyrc-bl.png</filename>
+			<filename>front/assets/images/box-greyrc-br.png</filename>
+			<filename>front/assets/images/box-greyrc-tl.png</filename>
+			<filename>front/assets/images/box-greyrc-tr.png</filename>
+			<filename>front/assets/images/icon-printlink.png</filename>
+			<filename>front/assets/images/igreen/image.png</filename>
+			<filename>front/assets/images/igreen/index.html</filename>
+			<filename>front/assets/images/igreen/shadow.png</filename>
+			<filename>front/assets/images/igrey/image.png</filename>
+			<filename>front/assets/images/igrey/index.html</filename>
+			<filename>front/assets/images/igrey/shadow.png</filename>
+			<filename>front/assets/images/ihome/image.png</filename>
+			<filename>front/assets/images/ihome/index.html</filename>
+			<filename>front/assets/images/ihome/shadow.png</filename>
+			<filename>front/assets/images/iinfoh/image.png</filename>
+			<filename>front/assets/images/iinfoh/index.html</filename>
+			<filename>front/assets/images/iinfoh/shadow.png</filename>
+			<filename>front/assets/images/iinfoi/image.png</filename>
+			<filename>front/assets/images/iinfoi/index.html</filename>
+			<filename>front/assets/images/iinfoi/shadow.png</filename>
+			<filename>front/assets/images/iinfop/image.png</filename>
+			<filename>front/assets/images/iinfop/index.html</filename>
+			<filename>front/assets/images/iinfop/shadow.png</filename>
+			<filename>front/assets/images/iinfoph/image.png</filename>
+			<filename>front/assets/images/iinfoph/index.html</filename>
+			<filename>front/assets/images/iinfoph/shadow.png</filename>
+			<filename>front/assets/images/iinfoz/image.png</filename>
+			<filename>front/assets/images/iinfoz/index.html</filename>
+			<filename>front/assets/images/iinfoz/shadow.png</filename>
+			<filename>front/assets/images/index.html</filename>
+			<filename>front/assets/images/istar/image.png</filename>
+			<filename>front/assets/images/istar/index.html</filename>
+			<filename>front/assets/images/istar/shadow.png</filename>
+			<filename>front/assets/images/iyellow/image.png</filename>
+			<filename>front/assets/images/iyellow/shadow.png</filename>
+			<filename>front/assets/index.html</filename>
+			<filename>front/assets/js/base64.js</filename>
+			<filename>front/assets/js/geoxml3.js</filename>
+			<filename>front/assets/js/index.html</filename>
+			<filename>front/assets/phocamaps.css</filename>
+			<filename>front/controller.php</filename>
+			<filename>front/helpers/index.html</filename>
+			<filename>front/helpers/route.php</filename>
+			<filename>front/index.html</filename>
+			<filename>front/models/index.html</filename>
+			<filename>front/models/map.php</filename>
+			<filename>front/phocamaps.php</filename>
+			<filename>front/router.php</filename>
+			<filename>front/views/index.html</filename>
+			<filename>front/views/map/index.html</filename>
+			<filename>front/views/map/metadata.xml</filename>
+			<filename>front/views/map/tmpl/default.php</filename>
+			<filename>front/views/map/tmpl/default.xml</filename>
+			<filename>front/views/map/tmpl/index.html</filename>
+			<filename>front/views/map/view.html.php</filename>
+			<filename>front/views/route/index.html</filename>
+			<filename>front/views/route/metadata.xml</filename>
+			<filename>front/views/route/tmpl/default.php</filename>
+			<filename>front/views/route/tmpl/index.html</filename>
+			<filename>front/views/route/view.html.php</filename>
+			<filename>language/en-GB/en-GB.com_phocamaps.ini</filename>
+			<filename>language/en-GB/en-GB.com_phocamaps.menu.ini</filename>
+			<filename>other/install_xml.php</filename>
+		</files>
+
+		<!-- Language -->
+		<languages>
+			<language tag="en-GB">language/en-GB/en-GB.com_phocamaps.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_phocamaps.menu.ini</language>
+		</languages>
+
+	</administration>
+</install>

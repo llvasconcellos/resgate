@@ -1,0 +1,91 @@
+
+
+div.icon-48-info {
+	background: url('images/icon-48-info.png') no-repeat left;
+}
+div.icon-48-phoca {
+	background: url('images/icon-48-phoca.png') no-repeat left;
+}
+div.icon-48-phocamaps {
+	background: url('images/icon-48-phocamaps.png') no-repeat left;
+}
+div.icon-48-map {
+	background: url('images/icon-48-map.png') no-repeat left;
+}
+div.icon-48-marker {
+	background: url('images/icon-48-marker.png') no-repeat left;
+}
+
+
+
+
+
+
+
+
+
+
+
+div.icon-48-dm {
+	background: url('images/icon-48-dm.png') no-repeat left;
+}
+div.icon-48-wm {
+	background: url('images/icon-48-wm.png') no-repeat left;
+}
+div.icon-48-fm {
+	background: url('images/icon-48-fm.png') no-repeat left;
+}
+div.icon-48-bl {
+	background: url('images/icon-48-bl.png') no-repeat left;
+}
+div.icon-48-wl {
+	background: url('images/icon-48-wl.png') no-repeat left;
+}
+
+
+span.icon-32-email {
+	background: url('images/icon-32-email.png') no-repeat left;
+}
+span.icon-32-emailsave {
+	background: url('images/icon-32-emailsave.png') no-repeat left;
+}
+span.icon-32-pdf {
+	background: url('images/icon-32-pdf.png') no-repeat left;
+}
+span.icon-32-pdf-dis {
+	background: url('images/icon-32-pdf-dis.png') no-repeat left;
+}
+span.icon-32-multiple {
+	background: url('images/icon-32-multiple.png') no-repeat left;
+}
+span.icon-32-settings {
+	background: url('images/icon-32-settings.png') no-repeat left;
+}
+
+#pg-update {
+	margin:0;
+	margin-top:10px;
+	padding-left:50px;
+	padding-top:14px;
+	height:45px;
+	width:270px;
+	background: url('images/update.png') 0 0 no-repeat;
+}
+#pg-update a {
+	text-decoration:underline;
+	font-size:16px;
+	font-weight:bold;
+	color:#fff;
+}
+
+a img, img {border:0px;text-decoration:none;}
+
+.p-noscript {
+	text-align:	center;
+	background:	#ffcc00;
+	padding:	10px;
+}
+
+#phocamaps .p-add-address {
+	margin-top: 10px;
+}

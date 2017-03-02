@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="content">
+	<name>FlippingBook Plugin</name>
+	<author>Mediaparts Interactive</author>
+	<creationDate>March 2009</creationDate>
+	<copyright>Copyright Mediaparts Interactive. All rights reserved.</copyright>
+	<license>Commercial License</license>
+	<authorEmail>support@page-flip-tools.com</authorEmail>
+	<authorUrl>http://page-flip-tools.com</authorUrl>
+	<version>1.5.7</version>
+	<description>FlippingBook Gallery Plugin is a extension that allows you to publish book inside a content item. Just include {flippingbook_book X}, where X - book ID. The book ID value you can find in Book Manager (Components - FlippingBook - Manage Books). The plugin allows to publish only one book on a webpage.</description>
+	<files>
+		<filename plugin="flippingbook_plugin">flippingbook_plugin.php</filename>
+	</files>
+</install>

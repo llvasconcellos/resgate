@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<params addpath="/administrator/components/com_phocamaps/elements">
+
+	<param name="@phocahead" type="phocahead" default="GENERAL SETTINGS LABEL" />
+		
+	<param name="enable_kml" type="list" default="0" label="Enable KML File Loading" description="Enable KML File Loading DESC">
+	<option value="0">No</option>
+	<option value="1">Yes</option>
+</param>
+		
+	<param name="@spacer" type="spacer" default="" label="" description="" />
+	
+	<param name="display_print_route" type="list" default="1" label="Display Print Route" description="Display Print Route DESC">
+	<option value="0">No</option>
+	<option value="1">Yes</option>
+</param>
+
+	
+	</params>
+</config>
